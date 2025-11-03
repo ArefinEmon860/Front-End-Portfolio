@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio of Arefin Emon</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="./tailwind.config.js"></script>
+</head>
+<body class="overflow-x-hidden">
+
+  
+  <!-- ✅ Fixed Navbar (with scroll effect) -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full px-5 lg:px-8 xl:px-[8%] 
+      flex items-center justify-between bg-white/50 backdrop-blur-md z-[999] 
+      transition-all duration-300">
+    <img src="./images/Elegant Serif Typography_ Arefin.png" alt="Logo" class="w-28 cursor-pointer mr-14" />
+    <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white/80 shadow-sm">
+      <li><a href="#top" class="hover:text-[#b820e6]">Home</a></li>
+      <li><a href="#about" class="hover:text-[#b820e6]">About me</a></li>
+      <li><a href="#services" class="hover:text-[#b820e6]">Services</a></li>
+      <li><a href="#work" class="hover:text-[#b820e6]">My Work</a></li>
+      <li><a href="#contact" class="hover:text-[#b820e6]">Contact me</a></li>
+    </ul>
+    <div class="flex items-center gap-4">
+      <a href="#contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 hover:bg-gray-100">
+        Contact <img src="./images/arrow-icon.png" alt="Logo" class="w-3" />
+      </a>
+      <button class="block md:hidden ml-3" onclick="openMenu()">
+        <img src="./images/menu-black.png" alt="" class="w-6" />
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64
+               z-[1000] h-screen bg-rose-50 transition-all duration-500">
+      <div class="absolute right-6 top-6" onclick="closeMenu()">
+        <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer" />
+      </div>
+      <li><a href="#top" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About me</a></li>
+      <li><a href="#services" onclick="closeMenu()">Services</a></li>
+      <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div id="top" class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <img src="./images/emon5.jpg.png" alt="" class="rounded-full w-32" />
+    <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">
+      Hi I'm Arefin Emon
+      <img src="./images/hand-icon.png" alt="" class="w-6" />
+    </h3>
+    <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-bold">Full Stack Developer</h1>
+    <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+      <a href="#contact" class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20]
+        text-white flex items-center gap-2 hover:opacity-90">
+        contact me <img src="./images/right-arrow-white.png" alt="" class="w-4" />
+      </a>
+      <a href="./images/Portfolio.pdf" download class="px-10 py-3 border rounded-full border-gray-500 
+        flex items-center gap-2 bg-white hover:bg-gray-100">
+        my resume <img src="./images/download-icon.png" alt="" class="w-4" />
+      </a>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg">Introduction</h4>
+    <h2 class="text-center text-5xl font-semibold">About me</h2>
+    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+      <div class="max-w-wax mx-auto relative">
+        <img src="./images/emon4.jpg.png" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none -mt-12" />
+      </div>
+      <div class="flex-1">
+        <p class="mb-4 max-w-2xl">
+          I’m a Full Stack Developer with hands-on experience in building full-stack web applications.
+          I specialize in MongoDB, Express.js, React.js, and Node.js, along with Next.js for creating modern, scalable,
+          and SEO-friendly applications.
+        </p>
+        <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+          <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] 
+          hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+            <img src="./images/code-icon.png" alt="" class="w-7 mt-3" />
+            <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
+            <p class="text-gray-600 text-sm">React.js, Next.js, Node.js, Express.js, MongoDB</p>
+          </li>
+          <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] 
+          hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+            <img src="./images/edu-icon.png" alt="" class="w-7 mt-3" />
+            <h3 class="my-4 font-semibold text-gray-700">Education</h3>
+            <p class="text-gray-600 text-sm">B.Sc. in Computer Science & Engineering</p>
+          </li>
+          <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] 
+          hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]">
+            <img src="./images/project-icon.png" alt="" class="w-7 mt-3" />
+            <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
+            <p class="text-gray-600 text-sm">Built more than 4 projects</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg">What I offer</h4>
+    <h2 class="text-center text-5xl font-semibold">My services</h2>
+    <p class="text-center max-w-2xl mx-auto mt-2 mb-10">
+      I’m a Full Stack developer who loves turning ideas into interactive web experiences.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-1">
+      <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000]
+          cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+        <img src="./images/code-icon.png" alt="" class="w-10" />
+        <h3 class="text-lg my-4 text-gray-700 font-semibold">Front-End Developer</h3>
+        <p class="text-sm text-gray-600 leading-5">
+          I create clean, responsive, and user-friendly websites using modern technologies.
+        </p>
+      </div>
+      <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000]
+          cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+        <img src="./images/code-icon.png" alt="" class="w-10" />
+        <h3 class="text-lg my-4 text-gray-700 font-semibold">Back-End Developer</h3>
+        <p class="text-sm text-gray-600 leading-5">
+          I build and maintain the server-side of web applications using Node.js and Express.
+        </p>
+      </div>
+      <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000]
+          cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500">
+        <img src="./images/code-icon.png" alt="" class="w-10" />
+        <h3 class="text-lg my-4 text-gray-700 font-semibold">Full-Stack Developer</h3>
+        <p class="text-sm text-gray-600 leading-5">
+          I build complete web applications using both frontend and backend technologies.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Work Section -->
+  <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
+    <h2 class="text-center text-5xl font-semibold mb-8">My Latest Work</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
+      <div class="relative group w-[300px] h-[200px] rounded-lg overflow-hidden cursor-pointer bg-black">
+        <img src="./images/Forever-Ecommerce.png" alt="Forever Ecommerce"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 
+          group-hover:opacity-100 transition-opacity duration-500">
+          <a href="https://mern-ecommerce-frontend-delta-five.vercel.app/" target="_blank"
+            class="transition-transform duration-300 hover:scale-110">
+            <img src="./images/arrow-icon.png" alt="arrow icon" class="w-10 h-10 invert" />
+          </a>
+        </div>
+      </div>
+      <div class="relative group w-[300px] h-[200px] rounded-lg overflow-hidden cursor-pointer bg-black">
+        <img src="./images/Blog-App.png" alt="Forever Ecommerce"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 
+          group-hover:opacity-100 transition-opacity duration-500">
+          <a href="https://blog-app-client-psi-three.vercel.app/" target="_blank"
+            class="transition-transform duration-300 hover:scale-110">
+            <img src="./images/arrow-icon.png" alt="arrow icon" class="w-10 h-10 invert" />
+          </a>
+        </div>
+      </div>
+      <div class="relative group w-[300px] h-[200px] rounded-lg overflow-hidden cursor-pointer bg-black">
+        <img src="./images/Chat-App.png" alt="Forever Ecommerce"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 
+          group-hover:opacity-100 transition-opacity duration-500">
+          <a href="https://real-time-chat-application-1-p639.onrender.com/" target="_blank"
+            class="transition-transform duration-300 hover:scale-110">
+            <img src="./images/arrow-icon.png" alt="arrow icon" class="w-10 h-10 invert" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')]
+    bg-no-repeat bg-[length:90%_auto] bg-center">
+    <h4 class="text-center mt-8 text-lg">Connect with me</h4>
+    <h2 class="text-center text-5xl font-semibold">Get in touch</h2>
+    <form action="" class="max-w-2xl mx-auto mt-8">
+      <div class="grid grid-cols-2 gap-6">
+        <input type="text" placeholder="Enter your name"
+          class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white" />
+        <input type="email" placeholder="Enter your email"
+          class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white" />
+      </div>
+      <textarea rows="6" placeholder="Enter your message"
+        class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mt-6 mb-6"></textarea>
+      <button class="py-3 px-8 w-max flex items-center justify-center gap-2 bg-black/80 text-white rounded-full mx-auto
+        hover:bg-black duration-500">
+        Submit now
+        <img src="./images/right-arrow-white.png" alt="" class="w-4" />
+      </button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class="mt-20">
+    <div class="text-center">
+      <img src="./images/Elegant Serif Typography_ Arefin.png" alt="" class="w-36 mx-auto mb-1" />
+      <div class="w-max flex items-center gap-2 mx-auto">
+        <img src="./images/mail_icon.png" alt="" class="w-6" />
+        arefinemon308@gmail.com
+      </div>
+    </div>
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+      <p>© 2025 Arefin Emon. All rights reserved.</p>
+      <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+        <li><a href="https://github.com/ArefinEmon860">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/arefin-emon-7285a4373/">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ✅ Script -->
+  <script>
+    function openMenu() {
+      document.getElementById("sideMenu").classList.remove("-right-64");
+      document.getElementById("sideMenu").classList.add("right-0");
+    }
+    function closeMenu() {
+      document.getElementById("sideMenu").classList.remove("right-0");
+      document.getElementById("sideMenu").classList.add("-right-64");
+    }
+
+    // ✅ Navbar Scroll Effect
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("shadow-md", "bg-white/80");
+      } else {
+        navbar.classList.remove("border-b", "border-gray-300", "shadow-md", "bg-white/80");
+      }
+    });
+  </script>
+
+</body>
+</html>
